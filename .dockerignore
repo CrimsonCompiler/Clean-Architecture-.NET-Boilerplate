@@ -1,0 +1,31 @@
+﻿# Git files
+**/.git
+**/.gitignore
+
+# IDE files
+**/.vs
+**/.vscode
+**/.idea
+**/*.sln.iml
+**/*.user
+
+# Build outputs
+**/bin
+**/obj
+
+# Database files
+**/*.db
+**/*.db-journal
+**/*.db-shm
+**/*.db-wal
+
+# Docker files (to avoid copying them into the container)
+**/Dockerfile
+**/Dockerfile.*
+**/docker-compose*.yml
+**/.dockerignore
+
+# Documentation and others
+**/README.md
+**/LICENSE
+**/Thumbs.db
