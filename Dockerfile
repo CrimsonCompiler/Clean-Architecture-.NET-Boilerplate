@@ -4,7 +4,6 @@
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
 WORKDIR /app
 EXPOSE 8080
-
 ENV ASPNETCORE_HTTP_PORTS=8080
 
 # ==========================================
@@ -14,16 +13,16 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 
 COPY ["CleanArchitectureBoilerplate.sln", "./"]
-COPY ["src/CA.Api/CA.Api.csproj", "src/CA.Api/"]
-COPY ["src/CA.Application/CA.Application.csproj", "src/CA.Application/"]
-COPY ["src/CA.Domain/CA.Domain.csproj", "src/CA.Domain/"]
-COPY ["src/CA.Infrastructure/CA.Infrastructure.csproj", "src/CA.Infrastructure/"]
+COPY ["CA.Api/CA.Api.csproj", "CA.Api/"]
+COPY ["CA.Application/CA.Application.csproj", "CA.Application/"]
+COPY ["CA.Domain/CA.Domain.csproj", "CA.Domain/"]
+COPY ["CA.Infrastructure/CA.Infrastructure.csproj", "CA.Infrastructure/"]
 
 RUN dotnet restore "./CleanArchitectureBoilerplate.sln"
 
 COPY . .
 
-WORKDIR "/src/src/CA.Api"
+WORKDIR "/src/CA.Api"
 RUN dotnet build "CA.Api.csproj" -c Release -o /app/build
 
 # ==========================================
