@@ -62,7 +62,7 @@ src/
 └── CA.Infrastructure/      # Infrastructure Layer (DbContext, Repositories)
 ```
 
-## 🚦 Getting Started
+## Getting Started
 
 ### Prerequisites
 - [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) or higher
@@ -91,7 +91,7 @@ src/
     - **Scalar UI:** `https://localhost:5001/scalar/v1` (or your configured port)
     - **Health Check:** `https://localhost:5001/`
 
-## 🧪 Testing the API
+##Testing the API
 
 You can test the endpoints directly from the Scalar UI or using Postman/cURL.
 
@@ -112,7 +112,7 @@ curl -X POST "https://localhost:5001/api/Products" \
 curl -X GET "https://localhost:5001/api/Products"
 ```
 
-## 💡 Why this Project?
+## Why this Project?
 
 This boilerplate is designed to solve common enterprise development challenges:
 - **Maintainability:** Changes in the database or UI do not affect the core business logic.
